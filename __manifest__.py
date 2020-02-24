@@ -11,7 +11,7 @@
     'demo': [],
     'data': [
         'security/ir.model.access.csv',
-        'alunno.xml',
+        'views/alunno.xml',
     ],
     'installable': True,
     'application': True,
