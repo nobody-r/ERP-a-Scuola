@@ -1,1 +1,1 @@
-from . import alunno
+from . import alunno, voti
