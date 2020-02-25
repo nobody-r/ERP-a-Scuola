@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    #modalità visualizzazione TREE
+    <record id="voti_tree" model="ir.ui.view">
+        <field name="name">scuola.voti.tree</field>
+        <field name="model">scuola.voti</field>
+        <field name="arch"  type="xml">
+            <tree string="Voti">
+                <field name="voto_alunno"/>
+                <field name="voto_materia"/>
+                <field name="voto_data"/>
+                <field name="alunno_id"/>
+            </tree>
+        </field>
+    </record>
+
+    #modalità visualizzazione FORM
+    <record id="voti_form" model="ir.ui.view">
+        <field name="name">scuola.voti.form</field>
+        <field name="model">scuola.voti</field>
+        <field name="arch"  type="xml">
+            <form string="Voti">
+                <sheet>
+                    <group>
+                        <group>
+                             <field name="alunno_id"/>
+                        </group>
+                        <group>
+                            <field name="voto_materia"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="voto_alunno"/>
+                        <field name="voto_data"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="action_voto" model="ir.actions.act_window">
+        <field name="name">Voti</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scuola.voti</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontest_smiling_face">
+                Inserisci il voto!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
+    <menuitem id="scuola_alunno" name="Voti" parent="scuola_modulo" action="action_voti"/>
+
+</odoo>
