@@ -10,7 +10,7 @@
     'license' :'AGPL-3',
     'demo': [],
     'data': [
-       # 'security/ir.model.access.csv',
+         'security/ir.model.access.csv',
          'views/alunno.xml',
     ],
     'installable': True,
