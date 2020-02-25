@@ -43,7 +43,7 @@
 
 
 
-    <record id="action_alunno" model="ir.actions.act.window">
+    <record id="action_alunno" model="ir.actions.act_window">
         <field name="name">Alunni</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">scuola.alunno</field>
