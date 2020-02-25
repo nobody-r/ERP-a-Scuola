@@ -1,2 +1,2 @@
 from . import alunno
-from . import votii
+from . import voti
