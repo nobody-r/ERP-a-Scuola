@@ -55,6 +55,6 @@
     </record>
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
-    <menuitem id="scuola_alunno" name="Voti" parent="scuola_modulo" action="action_voti"/>
+    <menuitem id="scuola.voti" name="Voti" parent="scuola_modulo" action="action_voto"/>
 
 </odoo>
