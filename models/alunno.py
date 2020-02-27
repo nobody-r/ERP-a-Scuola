@@ -9,7 +9,7 @@ class scuola_alunno(models.Model):
     anni_alunno= fields.Char(string='Anni', required= True)
     note_alunno= fields.Text(string='Note')
     foto_alunno= fields.Binary(string='Foto alunno')
-"""""
+"""
     @api.multi
     def open_student_votes(self):
         return {
