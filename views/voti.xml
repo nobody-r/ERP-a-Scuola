@@ -24,7 +24,7 @@
                 <sheet>
                     <group>
                         <group>
-                             <field name="alunno_id"/>
+                            <field name="alunno_id"/>
                         </group>
                         <group>
                             <field name="voto_materia"/>
