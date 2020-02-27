@@ -29,8 +29,8 @@
                         <group>
                             <field name="voto_materia"/>
                         </group>
-                    </group>
-                    <group>
+                        </group>
+                        <group>
                         <field name="voto_alunno"/>
                         <field name="voto_data"/>
                     </group>

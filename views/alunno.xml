@@ -23,6 +23,11 @@
         <field name="arch"  type="xml">
             <form string="Alunni">
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="open_student_votes" string="Voti"  class="oe_stat_button" type="object" >
+
+                        </button>
+                    </div>
                     <group>
                         <group>
                             <field name="nome_alunno"/>
