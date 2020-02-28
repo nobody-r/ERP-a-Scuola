@@ -12,7 +12,7 @@ class scuola_alunno(models.Model):
     @api.multi
     def alunno_voti(self):
         return {
-            'name': _('votes'),
+            'name': ('votes'),
             'domain': [('alunno_id', '=', self.id)],
             'view_type': 'form',
             'res_model': 'scuola.voti',
