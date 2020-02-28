@@ -24,7 +24,7 @@
             <form string="Alunni">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button name="alunno_voti" string="Voti"
+                        <button name="alunno_voti" string="Voti" icon="fa-edit"
                                 class="oe_stat_button" type="object">
                         </button>
                     </div>
