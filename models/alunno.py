@@ -8,7 +8,6 @@ class scuola_alunno(models.Model):
     anni_alunno= fields.Char(string='Anni', required= True)
     note_alunno= fields.Text(string='Note')
     foto_alunno= fields.Binary(string='Foto alunno')
-    classe_alunno= fields.one2one('alunno.classe',string='Classe alunno')
 
     @api.multi
     def alunno_voti(self):
