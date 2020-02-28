@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    #modalità visualizzazione TREE
+    <record id="classe_tree" model="ir.ui.view">
+        <field name="name">alunno.classe.tree</field>
+        <field name="model">alunno.classe</field>
+        <field name="arch"  type="xml">
+            <tree string="Voti">
+                <field name="alunno_id"/>
+            </tree>
+        </field>
+    </record>
+
+    #modalità visualizzazione FORM
+    <record id="classe_form" model="ir.ui.view">
+        <field name="name">alunno.classe.form</field>
+        <field name="model">alunno.classe</field>
+        <field name="arch"  type="xml">
+            <form string="Voti">
+                <sheet>
+                     <field name="alunno_id"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_classe" model="ir.actions.act_window">
+        <field name="name">Classi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">alunno.classe</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+        </field>
+    </record>
+
+    <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
+    <menuitem id="alunno_classe" name="Classi" parent="scuola_modulo" action="action_classe"/>
+
+</odoo>
