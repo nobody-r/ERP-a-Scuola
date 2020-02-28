@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class scuola_alunno(models.Model):
     _name= 'scuola.alunno'
@@ -11,13 +11,13 @@ class scuola_alunno(models.Model):
     foto_alunno= fields.Binary(string='Foto alunno')
 
     @api.multi
-    def open_student_votes(self):
+    def alunno_voti(self):
         return {
-        'name': _('Voti'),
-        'domain': [('alunno_id', '=', self.id)],
-        'view_type': 'form',
-        'res_model': 'scuola.voti',
-        'view_id': False,
-        'view_mode': 'tree,form',
-        'type': 'ir.actions.act_window',
+            'name': _('votes'),
+            'domain': [('alunno_id', '=', self.id)],
+            'view_type': 'form',
+            'res_model': 'scuola.voti',
+            'view_id': False,
+            'view_mode': 'tree,form',
+            'type': 'ir.actions.act_window',
         }
