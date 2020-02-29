@@ -1,8 +1,10 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 class scuola_alunno(models.Model):
     _name= 'scuola.alunno'
     _description= 'Alunno Record'
+    _rec_name= 'nome_alunno'
+
     nome_alunno= fields.Char(string='Nome', required= True)
     cognome_alunno= fields.Char(string='Cognome', required= True)
     anni_alunno= fields.Char(string='Anni', required= True)
@@ -12,7 +14,7 @@ class scuola_alunno(models.Model):
     @api.multi
     def alunno_voti(self):
         return {
-            'name': ('votes'),
+            'name': _('votes'),
             'domain': [('alunno_id', '=', self.id)],
             'view_type': 'form',
             'res_model': 'scuola.voti',
