@@ -3,7 +3,6 @@ from odoo import models, fields, api, _
 class scuola_alunno(models.Model):
     _name= 'scuola.alunno'
     _description= 'Alunno Record'
-    _rec_name= 'combination'
 
 
     nome_alunno= fields.Char(string='Nome', required= True)
@@ -13,10 +12,14 @@ class scuola_alunno(models.Model):
     foto_alunno= fields.Binary(string='Foto alunno')
     combination = fields.Char(string='Combination', compute='fields_combination')
 
-    @api.depends('nome_alunno', 'cognome_alunno')
-    def fields_combination(self):
-        for test in self:
-            test.combination = nome_alunno + ' ' + cognome_alunno
+    @api.multi
+    def name_get(self):
+        risultato=[]
+        for alunno in self:
+            nome= '[' + alunno.nome_alunno + ']' + alunno.cognome_alunno
+            risultato.append((alunno.id, nome))
+        return risultato
+
 
     @api.multi
     def alunno_voti(self):
