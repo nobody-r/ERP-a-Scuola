@@ -16,7 +16,7 @@ class scuola_alunno(models.Model):
     def name_get(self):
         risultato=[]
         for alunno in self:
-            nome= '[' + alunno.nome_alunno + ']' + alunno.cognome_alunno
+            nome=  + alunno.nome_alunno + alunno.cognome_alunno
             risultato.append((alunno.id, nome))
         return risultato
 
