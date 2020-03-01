@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
+    
     #modalità visualizzazione TREE
     <record id="alunno_tree" model="ir.ui.view">
         <field name="name">scuola.alunno.tree</field>
