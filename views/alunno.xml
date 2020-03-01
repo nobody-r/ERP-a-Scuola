@@ -46,7 +46,59 @@
         </field>
     </record>
 
-   
+    <record id="alunno_voti_form" model="ir.ui.view">
+            <field name="name">scuola.alunno.voti.form</field>
+            <field name="model">scuola.alunno</field>
+            <field name="arch" type="xml">
+                <form string="Account Entry" duplicate="false">
+                    <header>
+                        <button name="action_post" states="draft" string="Post" type="object" class="oe_highlight" groups="account.group_account_invoice"/>   
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="nome_alunno" invisible="0"/>
+                        <field name="cognome_alunno" invisible="0"/>
+                        <div class="oe_button_box">
+                        </div>
+                    <h1>
+                        <field name="nome_alunno" readonly="False" />
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="note_alunno"/>
+                        </group>
+                        <group>
+                            <field name="foto_alunno"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Journal votes">
+                            <field name="voti_ids" widget="one2many_list"
+                              context="{'voti_ids': voti_ids }">
+                                <tree editable="bottom" string="Journal voti">
+                                    <field name="voto_materia" />
+                                    <field name="voto_alunno" domain="[('voto_alunno', '=', alunno_id)]"/>
+                                    <field name="voto_data" />
+                                </tree>
+                                <!-- Form view to cover mobile use -->
+                                <form>
+                                  <group>
+                                    <field name="voto_materia" />
+                                    <field name="voto_alunno" domain="[('voto_alunno', '=', alunno_id)]"/>
+                                    <field name="voto_data" />
+                                  </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                            </group>
+                        </page>
+                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
     <record id="action_alunno" model="ir.actions.act_window">
         <field name="name">Alunni</field>
