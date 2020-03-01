@@ -11,7 +11,7 @@ class scuola_alunno(models.Model):
     note_alunno= fields.Text(string='Note')
     foto_alunno= fields.Binary(string='Foto alunno')
     combination = fields.Char(string='Combination', compute='fields_combination')
-    voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',
+    voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',)
 
     @api.multi
     def name_get(self):
