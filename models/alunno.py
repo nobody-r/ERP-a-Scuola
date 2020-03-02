@@ -36,11 +36,4 @@ class scuola_alunno(models.Model):
             'type': 'ir.actions.act_window',
         }
 
-"""
-    @api.multi
-    def action_post(self):
-        if self.mapped('anni_alunno'):
-            pass
-        return {}
-"""
 
