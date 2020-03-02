@@ -4,7 +4,6 @@ class scuola_alunno(models.Model):
     _name= 'scuola.alunno'
     _description= 'Alunno Record'
 
-
     nome_alunno= fields.Char(string='Nome', required= True)
     cognome_alunno= fields.Char(string='Cognome', required= True)
     anni_alunno= fields.Char(string='Anni', required= True)
@@ -13,7 +12,6 @@ class scuola_alunno(models.Model):
     assenze_alunno= fields.One2many('scuola.assenze','as_alunno_id', string='Assenza')
     voti_alunno= fields.One2many('scuola.voti','alunno_id', string='Voti')
 
-    #voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',)
 
     @api.multi
     def name_get(self):
