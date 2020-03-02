@@ -48,8 +48,8 @@ class scuola_assenze(models.Model):
     _description= 'Assenze Record'
 
     as_alunno_id = fields.Many2one('scuola.alunno', string="Assenza")
-    assenza_data = fields.Date(string='Data assenza', required=True)
+    assenza_data = fields.Date(string='Assenza', required=True)
     assenza_giustificata= fields.Selection([
-        ('da_giustificare', 'Da_Giustificare'),
+        ('ingiustificata', 'Ingiustificata'),
         ('Giustificata', 'Giustificata'),
-    ], default='da_giustificare')
+    ], default='ingiustificata')
