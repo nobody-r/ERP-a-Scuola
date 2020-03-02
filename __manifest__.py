@@ -13,6 +13,7 @@
          'security/ir.model.access.csv',
          'views/alunno.xml',
          'views/voti.xml',
+         'views/classe.xml',
     ],
     'installable': True,
     'application': True,

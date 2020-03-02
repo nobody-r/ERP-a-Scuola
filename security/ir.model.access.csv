@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_scuola_alunno,access.scuola.alunno,model_scuola_alunno,,1,1,1,1
 access_scuola_voti,access.scuola.voti,model_scuola_voti,,1,1,1,1
 access_scuola_assenze,access.scuola.assenze,model_scuola_assenze,,1,1,1,1
+access_scuola_classi,access.scuola.classi,model_scuola_classi,,1,1,1,1

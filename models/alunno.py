@@ -11,6 +11,7 @@ class scuola_alunno(models.Model):
     foto_alunno= fields.Binary(string='Foto alunno')
     assenze_alunno= fields.One2many('scuola.assenze','as_alunno_id', string='Assenza')
     voti_alunno= fields.One2many('scuola.voti','alunno_id', string='Voti')
+    classe_alunno= fields.Many2one('scuola.classi', string='Classe')
 
 
     @api.multi

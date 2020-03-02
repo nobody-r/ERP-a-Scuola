@@ -1,0 +1,65 @@
+<odoo>
+
+<record id="classi_kanban" model="ir.ui.view">
+            <field name="name">classi.kanban</field>
+            <field name="model">scuola.classi</field>
+            <field name="arch" type="xml">
+                <kanban class="o_res_partner_kanban">
+                    <field name="nome_classe"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details" align="center">
+                                    <strong class="o_kanban_record_title">
+                                    <field name="nome_classe"/>
+                                    </strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+    <record id="classi_tree" model="ir.ui.view">
+        <field name="name">scuola.classi.tree</field>
+        <field name="model">scuola.voti</field>
+        <field name="arch"  type="xml">
+            <tree string="Voti">
+                <field name="nome_classe"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="classi_form" model="ir.ui.view">
+        <field name="name">scuola.classi.form</field>
+        <field name="model">scuola.classi</field>
+        <field name="arch"  type="xml">
+            <form string="Voti">
+                <sheet>
+                        <group>
+                            <field name="nome_classe"/>
+                        </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+   <record id="action_classe" model="ir.actions.act_window">
+        <field name="name">Classe</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scuola.classi</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontest_smiling_face">
+                Aggiungi classe!
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
+    <menuitem id="scuola_classi" name="Classi" parent="scuola_modulo" action="action_classe"/>
+</odoo>
