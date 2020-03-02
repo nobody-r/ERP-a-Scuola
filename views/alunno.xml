@@ -23,11 +23,11 @@
         <field name="arch"  type="xml">
             <form string="Alunni">
                 <sheet>
-                    <div class="oe_button_box" name="button_box" visible="0">
+               <!--     <div class="oe_button_box" name="button_box" visible="0">
                         <button name="alunno_voti" string="Voti" icon="fa-edit"
                                 class="oe_stat_button" type="object" >
                         </button>
-                    </div>
+                    </div>  -->
                     <group>
                         <group>
                             <field name="nome_alunno"/>
