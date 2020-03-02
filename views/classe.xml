@@ -9,7 +9,7 @@
                 <field name = "nome_classe"/>
             <templates>
                 <t t-name="kanban-box">
-                    <div>
+                    <div align="center">
                         <ul>
                           <field name = "nome_classe"/>
                         </ul>
