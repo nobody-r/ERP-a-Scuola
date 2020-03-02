@@ -25,7 +25,7 @@
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button name="alunno_voti" string="Voti" icon="fa-edit"
-                                class="oe_stat_button" type="object">
+                                class="oe_stat_button" type="object" visible="0">
                         </button>
                     </div>
                     <group>
@@ -42,7 +42,18 @@
                         <field name="foto_alunno"/>
                     </group>
                     <notebook>
-                        <page string="ASSENZE">
+                        <page string="VOTI">
+                            <field name="voti_alunno">
+                            <field name="model">scuola.voti</field>
+                                <tree editable="bottom">
+                                    <field name="alunno_id" invisible="1"/>
+                                    <field name="voto_materia"/>
+                                    <field name="voto_data"/>
+                                    <field name="voto_alunno" string="voto"/>
+                                </tree>
+                            </field>
+                        </page>
+                          <page string="ASSENZE">
                             <field name="assenze_alunno">
                                 <tree editable="bottom">
                                     <field name="as_alunno_id" invisible="1"/>
