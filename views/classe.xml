@@ -11,7 +11,7 @@
                 <t t-name="kanban-box">
                     <div>
                         <ul>
-                            <li t-if="record.name.raw_value">Class Name: <field name="nome_classe"/></li>
+                          <field name = "nome_classe"/>
                         </ul>
                     </div>
                 </t>
