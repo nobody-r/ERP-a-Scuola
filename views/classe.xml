@@ -2,7 +2,7 @@
 
     <record id="classi_tree" model="ir.ui.view">
         <field name="name">scuola.classi.tree</field>
-        <field name="model">scuola.voti</field>
+        <field name="model">scuola.classi</field>
         <field name="arch"  type="xml">
             <tree string="Voti">
                 <field name="nome_classe"/>
