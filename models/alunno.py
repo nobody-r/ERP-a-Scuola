@@ -10,7 +10,9 @@ class scuola_alunno(models.Model):
     anni_alunno= fields.Char(string='Anni', required= True)
     note_alunno= fields.Text(string='Note')
     foto_alunno= fields.Binary(string='Foto alunno')
-  #  voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',)
+    assenze_alunno= fields.One2many('scuola.assenze','as_alunno_id', string='Assenza')
+
+    #voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',)
 
     @api.multi
     def name_get(self):
@@ -32,6 +34,7 @@ class scuola_alunno(models.Model):
             'view_mode': 'tree,form',
             'type': 'ir.actions.act_window',
         }
+
 """
     @api.multi
     def action_post(self):
@@ -39,3 +42,14 @@ class scuola_alunno(models.Model):
             pass
         return {}
 """
+
+class scuola_assenze(models.Model):
+    _name= 'scuola.assenze'
+    _description= 'Assenze Record'
+
+    as_alunno_id = fields.Many2one('scuola.alunno', string="Assenza")
+    assenza_data = fields.Date(string='Data assenza', required=True)
+    assenza_giustificata= fields.Selection([
+        ('da_giustificare', 'Da_Giustificare'),
+        ('Giustificata', 'Giustificata'),
+    ], default='da_giustificare')
