@@ -4,5 +4,5 @@ class scuola_classi(models.Model):
     _name= 'scuola.classi'
     _description= 'Classi Record'
 
-    classe_id= fields.one2Many('scuola.alunno','classe_alunno')
-    nome_classe= fields.Char('Nome classe')
+    classe_id= fields.one2Many('scuola.alunno','classe_alunno', string='Classe')
+    nome_classe= fields.Char('Nome classe', string='Noem Classe' )
