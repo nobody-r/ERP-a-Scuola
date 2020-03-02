@@ -20,6 +20,7 @@
                         <button name="classe_alunno" string="ALUNNI" icon="fa-male"
                                 class="oe_stat_button" type="object" >
                         </button>
+                    </div>
                     <group>
                         <field name="nome_classe"/>
                     </group>
