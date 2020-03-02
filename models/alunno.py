@@ -10,8 +10,7 @@ class scuola_alunno(models.Model):
     anni_alunno= fields.Char(string='Anni', required= True)
     note_alunno= fields.Text(string='Note')
     foto_alunno= fields.Binary(string='Foto alunno')
-    combination = fields.Char(string='Combination', compute='fields_combination')
-    voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',)
+  #  voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',)
 
     @api.multi
     def name_get(self):
@@ -33,9 +32,10 @@ class scuola_alunno(models.Model):
             'view_mode': 'tree,form',
             'type': 'ir.actions.act_window',
         }
-
+"""
     @api.multi
     def action_post(self):
         if self.mapped('anni_alunno'):
             pass
         return {}
+"""

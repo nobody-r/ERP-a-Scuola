@@ -46,6 +46,7 @@
         </field>
     </record>
 
+    <!--
     <record id="alunno_voti_form" model="ir.ui.view">
             <field name="name">scuola.alunno.voti.form</field>
             <field name="model">scuola.alunno</field>
@@ -80,7 +81,9 @@
                                     <field name="voto_alunno" domain="[('voto_alunno', '=', alunno_id)]"/>
                                     <field name="voto_data" />
                                 </tree>
-                                <!-- Form view to cover mobile use -->
+
+
+                                # Form view to cover mobile use
                                 <form>
                                   <group>
                                     <field name="voto_materia" />
@@ -100,6 +103,8 @@
             </field>
         </record>
 
+-->
+
     <record id="action_alunno" model="ir.actions.act_window">
         <field name="name">Alunni</field>
         <field name="type">ir.actions.act_window</field>
@@ -115,6 +120,6 @@
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
-    <menuitem id="scuola_alunno_MD" name="Registra voti" parent="scuola_modulo" action="alunno_voti_form"/>
+   <!-- <menuitem id="scuola_alunno_MD" name="Registra voti" parent="scuola_modulo" action="alunno_voti_form"/> -->
 
 </odoo>
