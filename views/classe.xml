@@ -16,7 +16,7 @@
         <field name="arch"  type="xml">
             <form string="Voti">
                 <sheet>
-                    <div class="oe_button_box" name="button_box" visible="0">
+                    <div class="oe_button_box" name="button_box">
                         <button name="classe_id" string="ALUNNI" icon="fa-male"
                                 class="oe_stat_button" type="object" >
                         </button>
