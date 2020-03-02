@@ -11,6 +11,7 @@ class scuola_alunno(models.Model):
     note_alunno= fields.Text(string='Note')
     foto_alunno= fields.Binary(string='Foto alunno')
     assenze_alunno= fields.One2many('scuola.assenze','as_alunno_id', string='Assenza')
+    voti_alunno= fields.One2many('scuola.voti','alunno_id', string='Voti')
 
     #voti_ids = fields.One2many('scuola.voti', 'voti_id', string='Journal voti',)
 
