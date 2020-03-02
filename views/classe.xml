@@ -17,15 +17,18 @@
             <form string="Voti">
                 <sheet>
                     <group>
-                       <field name="scuola_alunni">
-                            <field name="model">scuola.alunno</field>
-                            <tree editable="bottom">
-                                <field name="nome_alunno"/>
-                                <field name="cognome_alunno"/>
-                                <field name="anni_alunno"/>
-                                <field name="note_alunno"/>
-                            </tree>
-                        </field>
+                        <sheet>
+                           <field name="scuola_alunni">
+                                <field name="model">scuola.alunno</field>
+                                <tree editable="bottom">
+                                    <field name="nome_alunno"/>
+                                    <field name="cognome_alunno"/>
+                                    <field name="anni_alunno"/>
+                                    <field name="note_alunno"/>
+                                    <field name="classe_alunno"/>
+                                </tree>
+                            </field>
+                        </sheet>
                     </group>
                 </sheet>
             </form>
