@@ -12,6 +12,7 @@
                     <div>
                         <ul>
                           <field name = "nome_classe"/>
+                          <field name = "classe_id"/>
                         </ul>
                     </div>
                 </t>
