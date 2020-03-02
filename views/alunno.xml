@@ -46,8 +46,8 @@
                             <field name="assenze_alunno">
                                 <tree editable="bottom">
                                     <field name="as_alunno_id" invisible="1"/>
-                                    <field name="assenza_data"/>
-                                    <field name="assenza_giustificata"/>
+                                    <field name="assenza_data" sting="Data"/>
+                                    <field name="assenza_giustificata" string="Giustifica"/>
                                 </tree>
                             </field>
                         </page>
