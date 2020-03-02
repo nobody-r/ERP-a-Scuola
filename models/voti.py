@@ -15,7 +15,7 @@ class scuola_voti(models.Model):
         ('ec.politica', 'Ec.Politica'),
         ('religione', 'Religione'),
         ('ed.fisica', 'Ed.Fisica'),
-    ], string='Materia' required= True)
+    ], string='Materia', required= True)
     voto_data = fields.Date(string='Data voto', required= True)
     alunno_id = fields.Many2one('scuola.alunno', string="Alunni")
 
