@@ -44,6 +44,7 @@
                     <notebook>
                         <page string="VOTI">
                             <field name="voti_alunno">
+                                <field name="model">scuola.voti</field>
                                 <tree editable="bottom">
                                     <field name="alunno_id" invisible="1"/>
                                     <field name="voto_materia"/>
