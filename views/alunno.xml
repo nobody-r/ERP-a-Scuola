@@ -55,6 +55,7 @@
                         </page>
                           <page string="ASSENZE">
                             <field name="assenze_alunno">
+                            <field name="model">scuola.assenze</field>
                                 <tree editable="bottom">
                                     <field name="as_alunno_id" invisible="1"/>
                                     <field name="assenza_data"/>
