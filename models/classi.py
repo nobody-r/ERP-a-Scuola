@@ -5,4 +5,4 @@ class scuola_classi(models.Model):
     _description= 'Classi Record'
 
     classe_id= fields.One2many('scuola.alunno','classe_alunno', string='Classe')
-    nome_classe= fields.Char('Nome classe', string='Nome_Classe')
+    nome_classe= fields.Char(string='Nome Classe' required= True)
