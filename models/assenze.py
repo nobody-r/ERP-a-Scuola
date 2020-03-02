@@ -9,4 +9,4 @@ class scuola_assenze(models.Model):
     assenza_giustificata= fields.Selection([
         ('ingiustificata', 'Ingiustificata'),
         ('Giustificata', 'Giustificata'),
-    ], default='ingiustificata')
+    ], default='ingiustificata', string 'Assenza')
