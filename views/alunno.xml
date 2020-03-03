@@ -32,16 +32,16 @@
                     </div>  -->
                     <group>
                         <group>
-                            <field name="nome_alunno"/>
-                            <field name="cognome_alunno"/>
+                            <field name="nome_alunno" class="rallign"/>
+                            <field name="cognome_alunno" class="rallign"/>
                         </group>
                         <group>
-                            <field name="anni_alunno"/>
-                            <field name="classe_alunno"/>
+                            <field name="anni_alunno" class="rallign"/>
+                            <field name="classe_alunno" class="rallign"/>
                         </group>
                     </group>
                     <group>
-                        <field name="note_alunno"/>
+                        <field name="note_alunno" class="rallign"/>
                         <field name="foto_alunno" widget="image" height="130" width="130"/>
                     </group>
                     <notebook>
