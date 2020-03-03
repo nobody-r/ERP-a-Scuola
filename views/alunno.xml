@@ -11,7 +11,7 @@
                 <field name="cognome_alunno"/>
                 <field name="anni_alunno"/>
                 <field name="note_alunno"/>
-                <field name="foto_alunno"/>
+                <field name="foto_alunno" widget="image"/>
                 <field name="classe_alunno"/>
             </tree>
         </field>
@@ -42,7 +42,7 @@
                     </group>
                     <group>
                         <field name="note_alunno"/>
-                        <field name="foto_alunno"/>
+                        <field name="foto_alunno" widget="image"/>
                     </group>
                     <notebook>
                         <page string="VOTI">
