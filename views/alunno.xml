@@ -84,20 +84,28 @@
                 <!--field name="check_out"/-->
                 <templates>
                     <t t-name="kanban-box">
-                        <div t-attf-class="oe_kanban_global_click">
-                            <div>
-                                <!--field name="foto_alunno" widget="image" height="130" width="130"/-->
-                                <img t-att-src="kanban_image('scuola.alunno', 'foto_alunno', record.id.raw_value)" t-att-title="record.nome_alunno.value" t-att-alt="record.id.value" width="50" height="50" class="oe_kanban_avatar mr4"/>
-                                <span class="o_kanban_record_title">
-                                    <strong><t t-esc="record.id.value"/></strong>
-                                </span>
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_hr_kanban_record">
+                            <div class="o_kanban_image_fill_left d-none d-md-block" t-attf-style="background-image: url(#{kanban_image('scuola.alunno', 'foto_alunno', record.id.raw_value)})" role="img"/>
+                            <!-- Employee's picture optimized for mobile -->
+                            <div class="o_kanban_image d-md-none rounded-circle" t-attf-style="background-image: url(#{kanban_image('scuola.alunno', 'foto_alunno', record.id.raw_value)})" role="img"/>
+                            
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <field name="nome_alunno"/>
+                                            <field name="cognome_alunno"/>
+                                        </strong>
+                                        <!--span t-if="record.job_id.raw_value" class="o_kanban_record_subtitle"><field name="job_id"/></span-->
+                                    </div>
+                                </div>
+                                <field name="classe_alunno" widget="many2one_tags" options="{'color_field': 'color'}"/>
+                                <ul>
+                                    <li id="last_login"/>
+                                    <!--li t-if="record.work_location.raw_value"><field name="work_location"/></li-->
+                                </ul>
                             </div>
-                            <hr class="mt4 mb8"/>
-                            <div class="o_kanban_record_subtitle">
-                                <i class="fa fa-calendar" aria-label="Period" role="img" title="Period"></i>
-                                <t t-esc="record.nome_alunno.value"/>
-                                <t t-esc="record.cognome_alunno.value"/>
-                            </div>
+                    
                         </div>
                     </t>
                 </templates>
