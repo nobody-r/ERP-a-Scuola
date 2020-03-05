@@ -71,17 +71,18 @@
         </field>
     </record>
 
-     #Menù
-    <record id="action_scuola_voti" model="ir.actions.act_window">
-        <field name="name">Voti</field>
+
+    #Menù
+    <record id="action_sub_voti" model="ir.actions.act_window">
+        <field name="name">sub_voti</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scuola.voti</field>
+        <field name="view_type">form</field>
+        <field name="help" type="html">
+
+        </field>
     </record>
-
-    <menuitem id="ERP-s-Scuola.scuola_voti"
-            name="Voti"
-            action="action_scuola_voti"
-            parent="scuola_alunno"
-            sequence="2"/>
-
+    
 
     <record id="action_alunno" model="ir.actions.act_window">
         <field name="name">Alunni</field>
@@ -98,6 +99,7 @@
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
+    <menuitem id="sub_menu_voti" name="Voti" parent="scuola_alunno" action="action_sub_voti"/>
 
 
 </odoo>
