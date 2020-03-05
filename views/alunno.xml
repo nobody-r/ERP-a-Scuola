@@ -84,16 +84,18 @@
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
                             <div>
+                                <field name="foto_alunno" widget="image" height="130" width="130"/>
                                 <!--img t-att-src="kanban_image('scuola.alunno', 'foto_alunno')" t-att-title="record.id.value" t-att-alt="record.id.value" width="24" height="24" class="oe_kanban_avatar mr4"/-->
                                 <span class="o_kanban_record_title">
+                                     
                                     <!--strong><t t-esc="id.value"/></strong-->
                                 </span>
                             </div>
                             <hr class="mt4 mb8"/>
                             <div class="o_kanban_record_subtitle">
                                 <i class="fa fa-calendar" aria-label="Period" role="img" title="Period"></i>
-                                <!--t t-esc="record.check_in.value"/>
-                                - <t t-esc="record.check_out.value"/-->
+                                <field name="nome_alunno"/>
+                                <field name="cognome_alunno"/>
                             </div>
                         </div>
                     </t>
