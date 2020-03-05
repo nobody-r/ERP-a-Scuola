@@ -71,13 +71,43 @@
         </field>
     </record>
 
-
+ <record id="view_hr_presenze_kanban" model="ir.ui.view">
+        <field name="name">hr.presenze.kanban</field>
+        <field name="model">scuola.alunno</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="nome_alunno"/>
+                <field name="cognome_alunno"/>
+                <!--field name="check_in"/-->
+                <!--field name="check_out"/-->
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div>
+                                <img t-att-src="kanban_image('scuola.alunno', 'image_small', record.alunno_id.raw_value)" t-att-title="record.alunno_id.value" t-att-alt="record.alunno_id.value" width="24" height="24" class="oe_kanban_avatar mr4"/>
+                                <span class="o_kanban_record_title">
+                                    <strong><t t-esc="record.alunno_id.value"/></strong>
+                                </span>
+                            </div>
+                            <hr class="mt4 mb8"/>
+                            <div class="o_kanban_record_subtitle">
+                                <i class="fa fa-calendar" aria-label="Period" role="img" title="Period"></i>
+                                <!--t t-esc="record.check_in.value"/>
+                                - <t t-esc="record.check_out.value"/-->
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
     <record id="action_alunno" model="ir.actions.act_window">
         <field name="name">Alunni</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">scuola.alunno</field>
         <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontest_smiling_face">
                 Inserisci il primo alunno!
@@ -87,6 +117,5 @@
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
-
 
 </odoo>
