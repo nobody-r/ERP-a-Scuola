@@ -45,7 +45,7 @@ class scuola_presenze(models.Model):
                     raise exceptions.ValidationError(_('"Chek Out" non può essere precedente "Check In".'))
                     
                     
-    @api.constrains('check_in', 'check_out', 'employee_id')
+    @api.constrains('check_in', 'check_out', 'alunno_id')
     def _check_validity(self):
         """ Verifies the validity of the attendance record compared to the others from the same employee.
             For the same employee we must have :
