@@ -72,17 +72,34 @@
     </record>
 
 
-    #Menù
+    ###################################TEST########################################
+    <record id="sub_voti_tree" model="ir.ui.view">
+        <field name="name">sub.voti.tree</field>
+        <field name="model">scuola.voti</field>
+        <field name="arch"  type="xml">
+            <tree string="Voti">
+                <field name="voto_alunno"/>
+                <field name="voto_materia"/>
+                <field name="voto_data"/>
+                <field name="alunno_id"/>
+            </tree>
+        </field>
+    </record>
+
+   #Menù
     <record id="action_sub_voti" model="ir.actions.act_window">
         <field name="name">sub_voti</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">scuola.voti</field>
-        <field name="view_type">form</field>
+        <field name="view_type">tree</field>
+        <field name="view_mode">tree</field>
         <field name="help" type="html">
 
         </field>
     </record>
-    
+
+
+
 
     <record id="action_alunno" model="ir.actions.act_window">
         <field name="name">Alunni</field>
