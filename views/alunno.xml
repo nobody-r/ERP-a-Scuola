@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    #Menù
-    <record id="ERP-s-Scuola.scuola_voti" model="ir.actions.act_window">
-        <field name="name">Voti</field>
-    </record>
-
-    
     #modalità visualizzazione TREE
     <record id="alunno_tree" model="ir.ui.view">
         <field name="name">scuola.alunno.tree</field>
@@ -75,6 +69,11 @@
                 </sheet>
             </form>
         </field>
+    </record>
+
+     #Menù
+    <record id="ERP-s-Scuola.scuola_voti" model="ir.ui.menu">
+        <field name="name">Voti</field>
     </record>
 
 
