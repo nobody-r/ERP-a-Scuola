@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+
+    #Menù
+    <record id="scuola.voti.tree" model="ir.actions.act_window">
+        <field name="name">Voti</field>
+    </record>
+
     
     #modalità visualizzazione TREE
     <record id="alunno_tree" model="ir.ui.view">
