@@ -72,7 +72,7 @@
     </record>
 
      #Menù
-    <record id="ERP-s-Scuola.scuola_voti" model="ir.ui.menu">
+    <record id="ERP-a-Scuola.scuola_voti" model="ir.ui.menu">
         <field name="name">Voti</field>
     </record>
 
