@@ -2,7 +2,7 @@
 <odoo>
 
     #Menù
-    <record id="scuola.voti.tree" model="ir.actions.act_window">
+    <record id="voti_tree" model="ir.actions.act_window">
         <field name="name">Voti</field>
     </record>
 
