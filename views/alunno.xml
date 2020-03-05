@@ -92,6 +92,7 @@
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
+    <menuitem id="Voti_sub" name="Voti" parent="scuola_alunno" action="ERP-a-Scuola.scuola_voti" sequence="1"/>
 
 
 </odoo>
