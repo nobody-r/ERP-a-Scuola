@@ -70,7 +70,7 @@
             </form>
         </field>
     </record>
-    
+
     <record id="action_alunno" model="ir.actions.act_window">
         <field name="name">Alunni</field>
         <field name="type">ir.actions.act_window</field>
@@ -84,9 +84,22 @@
         </field>
     </record>
 
+    <record id="action_voto_" model="ir.actions.act_window">
+        <field name="name">Voti</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scuola.voti</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontest_smiling_face">
+                Inserisci il voto!
+            </p>
+        </field>
+    </record>
+
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
-    <menuitem id="Voti_sub" name="Voti" parent="scuola_alunno" action="ERP-a-Scuola.scuola_voti" sequence="1"/>
+    <menuitem id="Voti_sub" name="Voti" parent="scuola_alunno" action="action_voto_" sequence="1"/>
 
 
 </odoo>
