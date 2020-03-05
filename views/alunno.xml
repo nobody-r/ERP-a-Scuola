@@ -99,7 +99,7 @@
                                         <!--span t-if="record.job_id.raw_value" class="o_kanban_record_subtitle"><field name="job_id"/></span-->
                                     </div>
                                 </div>
-                                <h1><field name="classe_alunno" widget="many2one_tags" options="{'color_field': 'color'}"/></h1>
+                                <h3><field name="classe_alunno" widget="many2one_tags" options="{'color_field': 'color'}"/></h3>
                                 <ul>
                                     <li id="last_login"/>
                                     <!--li t-if="record.work_location.raw_value"><field name="work_location"/></li-->
