@@ -148,5 +148,5 @@
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
-    <!--menuitem id="scuola_alunno_form_presenze" name="Alunni - presenze" parent="scuola_modulo" action="hr_presenze_action"/-->
+    
 </odoo>
