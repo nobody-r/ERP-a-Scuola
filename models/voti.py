@@ -20,7 +20,7 @@ class scuola_voti(models.Model):
     alunno_id = fields.Many2one('scuola.alunno', string="Alunni")
 
     _defaults = {
-        'voto_data': lambda *a: time.strftime('%Y-%m-%d'),
+         'voto_data': fields.date.context_today,
     }
 
 
