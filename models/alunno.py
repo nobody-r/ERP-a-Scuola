@@ -3,7 +3,6 @@ from odoo import models, fields, api, _
 class scuola_alunno(models.Model):
     _name= 'scuola.alunno'
     _description= 'Alunno Record'
-    _inherit = ['mail.thread']
 
     nome_alunno= fields.Char(string='Nome', required= True)
     cognome_alunno= fields.Char(string='Cognome', required= True)
