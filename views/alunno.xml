@@ -71,12 +71,12 @@
         </field>
     </record>
 
- <record id="view_alunni_form_inherit_hr_presenze" model="ir.ui.view">
+ <!--record id="view_alunni_form_inherit_hr_presenze" model="ir.ui.view">
         <field name="name">hr.alunno.form</field>
         <field name="model">hr.alunno</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
-        <!--field name="priority">1</field-->
-        <field name="groups_id" eval="[(4,ref('hr_attendance.group_hr_attendance_user'))]"/>
+        <!--field name="priority">1</field ||-->
+        <!--<field name="groups_id" eval="[(4,ref('hr_attendance.group_hr_attendance_user'))]"/>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='toggle_active']" position="before">
                 <field name="attendance_state" invisible="1"/>
@@ -88,7 +88,7 @@
                     <div class="o_stat_info">
                         <span class="o_stat_text">Attendance</span>
                     </div>
-                </button-->
+                </button>
             </xpath>
             <xpath expr="//group[@name='active_group']" position="after">
                 <group string='Attendance' groups="hr_attendance.group_hr_attendance_user">
@@ -98,7 +98,7 @@
                 </group>
             </xpath>
         </field>
-    </record>
+    </record-->
   
   
  <record id="view_hr_presenze_kanban" model="ir.ui.view">
@@ -171,7 +171,7 @@
         </field>
     </record>
     
-     <record id="hr_presenze_action" model="ir.actions.act_window">
+     <!--record id="hr_presenze_action" model="ir.actions.act_window">
         <field name="name">Presenze</field>
         <field name="res_model">scuola.presenze</field>
         <field name="view_type">form</field>
@@ -179,16 +179,16 @@
         <field name="view_id" ref="hr.alunno.form" />
         <!--field name="context">{"search_default_today":1}</field-->
         <!--field name="search_view_id" ref="hr_attendance_view_filter" /-->
-        <field name="help" type="html">
+        <!--field name="help" type="html">
             <p class="o_view_nocontent_empty_folder">
                 No attendance records found
             </p><p>
                 The attendance records of your employees will be displayed here.
             </p>
         </field>
-    </record>
+    </record-->
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
-    <menuitem id="scuola_alunno_form_presenze" name="Alunni - presenze" parent="scuola_modulo" action="hr_presenze_action"/>
+    <!--menuitem id="scuola_alunno_form_presenze" name="Alunni - presenze" parent="scuola_modulo" action="hr_presenze_action"/-->
 </odoo>
