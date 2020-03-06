@@ -71,6 +71,36 @@
         </field>
     </record>
 
+ <record id="view_alunni_form_inherit_hr_presenze" model="ir.ui.view">
+        <field name="name">hr.alunno.form</field>
+        <field name="model">hr.alunno</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <!--field name="priority">1</field-->
+        <field name="groups_id" eval="[(4,ref('hr_attendance.group_hr_attendance_user'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='toggle_active']" position="before">
+                <field name="attendance_state" invisible="1"/>
+                <button name="%(hr_attendance_action_employee)d"
+                    class="oe_stat_button"
+                    type="action" attrs="{'invisible': [('attendance_state', '=', False)]}">
+                    <div role="img" id="oe_hr_attendance_status" class="fa fa-fw fa-circle o_button_icon oe_hr_attendance_status_green" attrs="{'invisible': [('attendance_state', '=', 'checked_out')]}" aria-label="Available" title="Available"/>
+                    <div role="img" id="oe_hr_attendance_status" class="fa fa-fw fa-circle o_button_icon oe_hr_attendance_status_red" attrs="{'invisible': [('attendance_state', '=', 'checked_in')]}" aria-label="Not available" title="Not available"/>
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Attendance</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//group[@name='active_group']" position="after">
+                <group string='Attendance' groups="hr_attendance.group_hr_attendance_user">
+                    <field name="barcode"/>
+                    <field name="pin" groups="hr_attendance.group_hr_attendance_use_pin"/>
+                    <field name="manual_attendance" attrs="{'invisible': [('user_id', '=', False)]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+  
+  
  <record id="view_hr_presenze_kanban" model="ir.ui.view">
         <field name="name">hr.presenze.kanban</field>
         <field name="model">scuola.alunno</field>
@@ -125,8 +155,25 @@
             </p>
         </field>
     </record>
+    
+     <record id="hr_presenze_action" model="ir.actions.act_window">
+        <field name="name">Presenze</field>
+        <field name="res_model">scuola.presenze</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr.alunno.form" />
+        <!--field name="context">{"search_default_today":1}</field-->
+        <!--field name="search_view_id" ref="hr_attendance_view_filter" /-->
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No attendance records found
+            </p><p>
+                The attendance records of your employees will be displayed here.
+            </p>
+        </field>
+    </record>
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
     <menuitem id="scuola_alunno" name="Alunni" parent="scuola_modulo" action="action_alunno"/>
-
+    <menuitem id="scuola_alunno_form_presenze" name="Alunni - presenze" parent="scuola_modulo" action="hr_presenze_action"/>
 </odoo>
