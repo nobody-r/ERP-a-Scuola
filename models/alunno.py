@@ -33,5 +33,7 @@ class scuola_alunno(models.Model):
             'view_mode': 'tree,form',
             'type': 'ir.actions.act_window',
         }
-
+    @api.multi
+    def stampa_voti(self):
+        return self.env.ref('voti_alunno').report_action(self)
 

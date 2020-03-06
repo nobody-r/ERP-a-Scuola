@@ -30,6 +30,10 @@
                                 class="oe_stat_button" type="object" >
                         </button>
                     </div>  -->
+                    <header>
+                        <button name="stampa_voti" type="object" string="Stampa voti" class="oe_highlight"/>
+                    </header>
+
                     <group>
                         <group>
                             <field name="nome_alunno" class="rallign"/>
