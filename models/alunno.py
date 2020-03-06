@@ -12,8 +12,6 @@ class scuola_alunno(models.Model):
     assenze_alunno= fields.One2many('scuola.assenze','as_alunno_id', string='Assenza')
     voti_alunno= fields.One2many('scuola.voti','alunno_id', string='Voti')
     classe_alunno= fields.Many2one('scuola.classi', string='Classe')
-    campo_test= fields.Char(string='test')
-
 
     @api.multi
     def name_get(self):
