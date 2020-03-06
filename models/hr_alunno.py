@@ -7,9 +7,9 @@ from string import digits
 from odoo import models, fields, api, exceptions, _, SUPERUSER_ID
 
 
-class HrEmployee(models.Model):
+class HrAlunno(models.Model):
     _inherit = "hr.employee"
-    _description = "Employee"
+    _description = "Alunno"
 
     def _default_random_pin(self):
         return ("".join(choice(digits) for i in range(4)))
