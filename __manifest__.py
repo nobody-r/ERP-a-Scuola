@@ -4,7 +4,7 @@
     'summary': 'Modulo per la scuola',
     'sequence': 15,
     'category': 'Extra Tools',
-    'author': 'Redon Copa','Antonio Vangi'
+    'author': 'Redon Copa & Antonio Vangi',
     'website': 'https://www.odoo.com/',
     'depends' : [],
     'license' :'AGPL-3',
