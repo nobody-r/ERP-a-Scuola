@@ -1,5 +1,5 @@
-from odoo import models, fields, api, _
-import time
+from odoo import models, fields, api
+from datetime import date
 
 class scuola_voti(models.Model):
     _name= 'scuola.voti'
@@ -16,13 +16,8 @@ class scuola_voti(models.Model):
         ('religione', 'Religione'),
         ('ed.fisica', 'Ed.Fisica'),
     ], string='Materia', required= True)
-    voto_data = fields.Date(string='Data voto', required= True)
+    voto_data = fields.Date(string='Data voto', required= True, default=date.today())
     alunno_id = fields.Many2one('scuola.alunno', string="Alunni")
-
-    _defaults = {
-         'voto_data': fields.date.context_today,
-    }
-
 
 
 
