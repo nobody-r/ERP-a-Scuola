@@ -1,7 +1,6 @@
 from odoo import models, fields, api, _
 
 class scuola_alunno(models.Model):
-    _inherit = 'hr.employee'
     _name= 'scuola.alunno'
     _description= 'Alunno Record'
 
