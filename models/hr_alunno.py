@@ -7,8 +7,8 @@ from string import digits
 from odoo import models, fields, api, exceptions, _, SUPERUSER_ID
 
 
-class HrAlunno(models.Model):
-    _name = "hr.alunno"
+class scuola_alunno_hr(models.Model):
+    _name = "scuola.alunno.hr"
     _inherit = "hr.employee"
     _description = "Alunno"
 
