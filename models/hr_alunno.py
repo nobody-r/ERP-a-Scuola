@@ -8,6 +8,7 @@ from odoo import models, fields, api, exceptions, _, SUPERUSER_ID
 
 
 class HrAlunno(models.Model):
+    _name = "hr.alunno"
     _inherit = "hr.employee"
     _description = "Alunno"
 
