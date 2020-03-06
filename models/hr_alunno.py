@@ -10,7 +10,7 @@ from odoo import models, fields, api, exceptions, _, SUPERUSER_ID
 class scuola_alunno_hr(models.Model):
     _name = "scuola.alunno.hr"
     _inherit = "hr.employee"
-    _description = "Alunno"
+    _description = "Alunno da impiegati"
 
     def _default_random_pin(self):
         return ("".join(choice(digits) for i in range(4)))
