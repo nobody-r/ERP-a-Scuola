@@ -23,10 +23,10 @@ class HrAlunno(models.Model):
     barcode = fields.Char(string="Badge ID", help="ID used for employee identification.", default=_default_random_barcode, copy=False)
     pin = fields.Char(string="PIN", default=_default_random_pin, help="PIN used to Check In/Out in Kiosk Mode (if enabled in Configuration).", copy=False)
 
-    attendance_ids = fields.One2many('hr.attendance', 'employee_id', help='list of attendances for the employee')
-    last_attendance_id = fields.Many2one('hr.attendance', compute='_compute_last_attendance_id', store=True)
-    attendance_state = fields.Selection(string="Attendance Status", compute='_compute_attendance_state', selection=[('checked_out', "Checked out"), ('checked_in', "Checked in")])
-    manual_attendance = fields.Boolean(string='Manual Attendance', compute='_compute_manual_attendance', inverse='_inverse_manual_attendance',
+    attendance_ids = fields.One2many('scuola.presenza', 'alunno_id', help='lista di presenza per alunno')
+    last_attendance_id = fields.Many2one('scuola.presenza', compute='_compute_last_attendance_id', store=True)
+    attendance_state = fields.Selection(string="Presenza Status", compute='_compute_attendance_state', selection=[('checked_out', "Checked out"), ('checked_in', "Checked in")])
+    manual_attendance = fields.Boolean(string='Presenza Manuale', compute='_compute_manual_attendance', inverse='_inverse_manual_attendance',
                                        help='The employee will have access to the "My Attendances" menu to check in and out from his session')
 
     _sql_constraints = [('barcode_uniq', 'unique (barcode)', "The Badge ID must be unique, this one is already assigned to another employee.")]
