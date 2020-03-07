@@ -79,18 +79,18 @@
 
     <!-- actions -->
 
-    <!--record id="hr_presenze_action" model="ir.actions.act_window">
+    <record id="hr_presenze_action" model="ir.actions.act_window">
         <field name="name">Presenze</field>
         <field name="res_model">hr.presenze</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="context">{"search_default_today":1}</field>
-        <field name="search_view_id" ref="hr_presenze_view_filter" />
+        <!--field name="search_view_id" ref="hr_presenze_view_filter" /-->
         <field name="help" type="html">
             <p>The attendance records of your employees will be displayed here.</p>
             <p>Please make sure you're using the correct filter if you expected to see any.</p>
         </field>
-    </record-->
+    </record>
 
     <record id="hr_presenze_action_employee" model="ir.actions.act_window">
         <field name="name">Presenze</field>
@@ -149,7 +149,7 @@
 
     <menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Manage Attendances" parent="scuola_menu_hr_attendance_root" sequence="20"/>
 
-    <!--menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="10"  action="hr_presenze_action"/-->
+    <menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="10"  action="hr_presenze_action"/>
 
     <menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Employees" parent="scuola_menu_hr_attendance_manage_attendances" sequence="15"  action="hr.open_view_employee_list_my"/>
 
