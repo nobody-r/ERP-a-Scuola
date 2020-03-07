@@ -8,8 +8,8 @@ from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 class HrAttendance(models.Model):
-    _name = "hr.attendance"
-    _description = "Attendance"
+    _name = "hr.presenze"
+    _description = "presenze"
     _order = "check_in desc"
 
     def _default_employee(self):
