@@ -6,7 +6,7 @@
     'category': 'Extra Tools',
     'author': 'Redon Copa & Antonio Vangi',
     'website': 'https://www.odoo.com/',
-    'depends' : ['base'],
+    'depends' : ['hr'],
     'license' :'AGPL-3',
     'demo': [],
     'data': [
