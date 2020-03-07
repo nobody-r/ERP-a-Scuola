@@ -14,6 +14,7 @@
          'views/alunno.xml',
          'views/voti.xml',
          'views/classe.xml',
+         'viewshr_presenze_view.xml',
     ],
     'installable': True,
     'application': True,
