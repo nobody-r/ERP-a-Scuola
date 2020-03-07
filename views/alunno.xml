@@ -122,8 +122,8 @@
         <field name="model">scuola.alunno</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name"/>
-                <field name="description"/>
+                <field name="nome_alunno"/>
+                <field name="cognome_alunno"/>
             </search>
         </field>
     </record>
