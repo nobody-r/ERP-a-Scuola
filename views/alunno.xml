@@ -116,6 +116,17 @@
         </field>
     </record>
     
+
+   <record model="ir.ui.view" id="alunno_search_view">
+        <field name="name">alunno.search</field>
+        <field name="model">scuola.alunno</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
   
     
     <record id="action_alunno" model="ir.actions.act_window">
