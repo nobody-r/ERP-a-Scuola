@@ -31,8 +31,8 @@
         </field>
     </record>
 
-    <record id="hr_presenze_view_filter" model="ir.ui.view">
-        <field name="name">hr_presenze_view_filter</field>
+    <record id="hr_attendance_view_filter" model="ir.ui.view">
+        <field name="name">hr_attendance_view_filter</field>
         <field name="model">hr.presenze</field>
         <field name="arch" type="xml">
             <search string="Alunnni presenze ricerche">
