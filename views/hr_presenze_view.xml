@@ -31,7 +31,7 @@
         </field>
     </record>
 
-    <record id="hr_presenze_view_filter" model="ir.ui.view">
+    <!--record id="hr_presenze_view_filter" model="ir.ui.view">
         <field name="name">hr.presenze.view.filter</field>
         <field name="model">hr.presenze</field>
         <field name="arch" type="xml">
@@ -51,7 +51,7 @@
                 </group>
             </search>
         </field>
-    </record>
+    </record-->
 
     <record id="hr_presenza_view_pivot" model="ir.ui.view">
         <field name="name">hr.presenze.pivot</field>
@@ -79,7 +79,7 @@
 
     <!-- actions -->
 
-    <record id="hr_presenze_action" model="ir.actions.act_window">
+    <!--record id="hr_presenze_action" model="ir.actions.act_window">
         <field name="name">Presenze</field>
         <field name="res_model">hr.presenze</field>
         <field name="view_type">form</field>
@@ -90,7 +90,7 @@
             <p>The attendance records of your employees will be displayed here.</p>
             <p>Please make sure you're using the correct filter if you expected to see any.</p>
         </field>
-    </record>
+    </record-->
 
     <record id="hr_presenze_action_employee" model="ir.actions.act_window">
         <field name="name">Presenze</field>
@@ -149,7 +149,7 @@
 
     <menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Manage Attendances" parent="scuola_menu_hr_attendance_root" sequence="20"/>
 
-    <menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="10"  action="hr_presenze_action"/>
+    <!--menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="10"  action="hr_presenze_action"/-->
 
     <menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Employees" parent="scuola_menu_hr_attendance_manage_attendances" sequence="15"  action="hr.open_view_employee_list_my"/>
 
