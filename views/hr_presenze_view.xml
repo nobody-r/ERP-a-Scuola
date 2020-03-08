@@ -141,19 +141,19 @@
     </record>
 
     <!-- Menus -->
-    <menuitem id="scuola_modulo" name="Scuola" sequence="0"/>
+ 
 
-    <menuitem id="scuola_menu_hr_attendance_root" name="Presenze" parent="scuola_modulo" sequence="5"  web_icon="hr_attendance,static/description/icon.png"/>
+    <menuitem id="scuola_modulo" name="Scuola" sequence="0"  web_icon="hr_attendance,static/description/icon.png"/>
     
-    <menuitem id="scuola_menu_hr_attendance_my_attendances" name="Check In / Check Out" parent="scuola_menu_hr_attendance_root" sequence="10"  action="hr_presenza_action_my_presenze"/>
+    <menuitem id="scuola_menu_hr_attendance_my_attendances" name="Check In / Check Out" parent="scuola_modulo"  action="hr_presenza_action_my_presenze"/-->
 
-    <menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Manage Attendances" parent="scuola_menu_hr_attendance_root" sequence="20"/>
+    <!--menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Manage Attendances" parent="scuola_menu_hr_attendance_root" sequence="20"/-->
 
-    <menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="10"  action="hr_presenze_action"/>
+    <!--menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="10"  action="hr_presenze_action"/-->
 
-    <menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Employees" parent="scuola_menu_hr_attendance_manage_attendances" sequence="15"  action="hr.open_view_employee_list_my"/>
+    <!--menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Employees" parent="scuola_menu_hr_attendance_manage_attendances" sequence="15"  action="hr.open_view_employee_list_my"/-->
 
-    <menuitem id="scuola_menu_hr_attendance_kiosk_mode" name="Kiosk Mode" parent="scuola_menu_hr_attendance_manage_attendances" sequence="20" action="hr_presenze_action_kiosk_mode"/>
+    <!--menuitem id="scuola_menu_hr_attendance_kiosk_mode" name="Kiosk Mode" parent="scuola_menu_hr_attendance_manage_attendances" sequence="20" action="hr_presenze_action_kiosk_mode"/-->
 
-    <menuitem id="scuola_menu_hr_attendance_report" name="Reporting" parent="scuola_menu_hr_attendance_root" sequence="30" action="hr_presenze_action_graph"/>
+    <!--menuitem id="scuola_menu_hr_attendance_report" name="Reporting" parent="scuola_menu_hr_attendance_root" sequence="30" action="hr_presenze_action_graph"/-->
 </odoo>
