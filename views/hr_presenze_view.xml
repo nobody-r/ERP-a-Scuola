@@ -149,11 +149,11 @@
 
     <!--menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Manage Attendances" parent="scuola_menu_hr_attendance_root" sequence="20"/-->
 
-    <!--menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="10"  action="hr_presenze_action"/-->
+    <menuitem id="scuola_menu_hr_attendance_view_attendances" name="Attendances" parent="scuola_modulo"  action="hr_presenze_action"/>
 
-    <!--menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Employees" parent="scuola_menu_hr_attendance_manage_attendances" sequence="15"  action="hr.open_view_employee_list_my"/-->
+    <menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Employees" parent="scuola_modulo"  action="hr.open_view_employee_list_my"/>
 
-    <!--menuitem id="scuola_menu_hr_attendance_kiosk_mode" name="Kiosk Mode" parent="scuola_menu_hr_attendance_manage_attendances" sequence="20" action="hr_presenze_action_kiosk_mode"/-->
+    <menuitem id="scuola_menu_hr_attendance_kiosk_mode" name="Kiosk Mode" parent="scuola_modulo"  action="hr_presenze_action_kiosk_mode"/>
 
-    <!--menuitem id="scuola_menu_hr_attendance_report" name="Reporting" parent="scuola_menu_hr_attendance_root" sequence="30" action="hr_presenze_action_graph"/-->
+    <menuitem id="scuola_menu_hr_attendance_report" name="Reporting" parent="scuola_modulo" action="hr_presenze_action_graph"/>
 </odoo>
