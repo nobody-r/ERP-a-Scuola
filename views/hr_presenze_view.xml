@@ -145,7 +145,7 @@
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"  web_icon="hr_attendance,static/description/icon.png"/>
     
-    <menuitem id="scuola_menu_hr_attendance_my_attendances" name="Check In / Check Out" parent="scuola_modulo"  action="hr_presenza_action_my_presenze"/-->
+    <menuitem id="scuola_menu_hr_attendance_my_attendances" name="Check In / Check Out" parent="scuola_modulo"  sequence="10" groups="hr_attendance.group_hr_attendance" action="hr_presenza_action_my_presenze"/-->
 
     <!--menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Manage Attendances" parent="scuola_menu_hr_attendance_root" sequence="20"/-->
 
