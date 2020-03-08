@@ -25,8 +25,8 @@
                     <field name="manual_attendance" attrs="{'invisible': [('user_id', '=', False)]}"/>
                 </group>
             </xpath>
-             <xpath expr="//field[@name='name']" position="replace">
-                    <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': False}" placeholder="e.g. Part Time" groups="hr.group_hr_user"/>
+             <xpath expr="//field[@name='category_ids']" position="replace">
+                    <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color'}" placeholder="e.g. Part Time"/>
             </xpath>
         </field>
     </record>
