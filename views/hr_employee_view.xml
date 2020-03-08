@@ -24,10 +24,7 @@
                     <field name="pin"/>
                     <field name="manual_attendance" attrs="{'invisible': [('user_id', '=', False)]}"/>
                 </group>
-            </xpath>
-             <xpath expr="//field[@name='category_ids']" position="replace">
-                    <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color'}" placeholder="e.g. studente/>
-            </xpath>                   
+            </xpath>               
         </field>
     </record>
 
