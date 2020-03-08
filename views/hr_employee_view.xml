@@ -24,7 +24,10 @@
                     <field name="pin"/>
                     <field name="manual_attendance" attrs="{'invisible': [('user_id', '=', False)]}"/>
                 </group>
-            </xpath>               
+            </xpath> 
+            <xpath expr="//group[@string='Position']" position="before">
+                 <field name="classe_id"/>
+            </xpath>             
         </field>
     </record>
 
