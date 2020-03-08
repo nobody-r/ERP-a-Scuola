@@ -149,7 +149,7 @@
 
     <menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Gestioni ulteriori" parent="scuola_modulo" sequence="20"/>
 
-    <menuitem id="scuola_menu_hr_attendance_view_presenze" name="Attendances" parent="scuola_menu_hr_attendance_manage_attendances" sequence="20"  action="hr_presenze_action"/>
+    <menuitem id="scuola_menu_hr_attendance_view_presenze" name="Attendances" parent="scuola_modulo"  action="hr_presenze_action"/>
 
     <menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Soggetti scolastici" parent="scuola_modulo" action="hr.open_view_employee_list_my"/>
 
