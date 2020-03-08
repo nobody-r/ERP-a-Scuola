@@ -7,6 +7,7 @@
         <field name="priority">10</field>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='toggle_active']" position="before">
+                <field name="child_ids"/>
                 <field name="attendance_state" invisible="1"/>
                 <button name="%(hr_presenze_action_employee)d"
                     class="oe_stat_button"
