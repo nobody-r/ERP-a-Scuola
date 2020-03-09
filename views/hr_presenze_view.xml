@@ -30,8 +30,8 @@
             </form>
         </field>
     </record>
-
-    <record id="hr_presenze_view_filter" model="ir.ui.view">
+    
+    <record id="hr_presenze_view_filtro" model="ir.ui.view">
         <field name="name">hr.presenze.view.filter</field>
         <field name="model">hr.presenze</field>
         <field name="arch" type="xml">
@@ -85,7 +85,7 @@
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="context">{"search_default_today":1}</field>
-        <!--field name="search_view_id" ref="hr_presenze_view_filter" /-->
+        <field name="search_view_id" ref="hr_presenze_view_filtro"/>
         <field name="help" type="html">
             <p>The attendance records of your employees will be displayed here.</p>
             <p>Please make sure you're using the correct filter if you expected to see any.</p>
@@ -145,7 +145,7 @@
 
     <menuitem id="scuola_modulo" name="Scuola" sequence="0"  web_icon="hr_attendance,static/description/icon.png"/>
     
-    <!--menuitem id="scuola_menu_hr_attendance_my_attendances" name="Check In / Check Out" parent="scuola_modulo"  action="hr_presenza_action_my_presenze"/-->
+    <menuitem id="scuola_menu_hr_attendance_my_attendances" name="Check In / Check Out" parent="scuola_modulo"  action="hr_presenza_action_my_presenze"/>
 
     <menuitem id="scuola_menu_hr_attendance_manage_attendances" name="Gestioni ulteriori" parent="scuola_modulo"/>
 
