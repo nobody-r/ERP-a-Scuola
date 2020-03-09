@@ -32,7 +32,7 @@
     </record>
     
     <record id="hr_presenze_view_filtro" model="ir.ui.view">
-        <field name="name">hr.presenze.view.filter</field>
+        <field name="name">hr.presenze.view.filtro</field>
         <field name="model">hr.presenze</field>
         <field name="arch" type="xml">
             <search string="alunnni_presenze_ricerche">
