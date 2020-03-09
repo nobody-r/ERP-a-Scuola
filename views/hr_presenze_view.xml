@@ -31,11 +31,11 @@
         </field>
     </record>
 
-    <!--record id="hr_presenze_view_filter" model="ir.ui.view">
+    <record id="hr_presenze_view_filter" model="ir.ui.view">
         <field name="name">hr.presenze.view.filter</field>
         <field name="model">hr.presenze</field>
         <field name="arch" type="xml">
-            <search string="Alunnni presenze ricerche">
+            <search string="alunnni_presenze_ricerche">
                 <field name="employee_id"/>
                 <field name="department_id"/>
                 <filter name="today" string="Today" domain="[('check_in', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('check_in', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
@@ -51,7 +51,7 @@
                 </group>
             </search>
         </field>
-    </record-->
+    </record>
 
     <record id="hr_presenza_view_pivot" model="ir.ui.view">
         <field name="name">hr.presenze.pivot</field>
