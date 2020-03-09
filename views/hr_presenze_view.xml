@@ -56,7 +56,7 @@
     </record>
     
      <record model="ir.ui.view" id="presenze_search_view">
-        <field name="name">presenze.filter/field>
+        <field name="name">presenze.filter</field>
         <field name="model">hr.presenze</field>
         <field name="arch" type="xml">
             <search>
