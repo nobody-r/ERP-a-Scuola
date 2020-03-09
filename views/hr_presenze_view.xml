@@ -153,7 +153,7 @@
 
     <menuitem id="scuola_menu_hr_attendance_view_presenze" name="Presenze_2" parent="scuola_menu_hr_attendance_manage_attendances" sequence="15" action="hr_presenze_action"/>
 
-    <menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Soggetti scolastici" parent="scuola_menu_hr_attendance_manage_attendances" sequence="20" action="hr.open_view_employee_list_my"/>
+    <menuitem id="scuola_menu_hr_attendance_view_employees_kanban" name="Soggetti scolastici" parent="scuola_modulo" sequence="20" action="hr.open_view_employee_list_my"/>
 
     <menuitem id="scuola_menu_hr_attendance_kiosk_mode" name="Kiosk Mode_2" parent="scuola_menu_hr_attendance_manage_attendances" sequence="25" action="hr_presenze_action_kiosk_mode"/>
 
