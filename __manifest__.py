@@ -16,6 +16,7 @@
          'views/classe.xml',
          'views/hr_presenze_view.xml',
          'views/hr_employee_view.xml',
+         'views/registro_onboarding_templates.xml',
     ],
     'installable': True,
     'application': True,
