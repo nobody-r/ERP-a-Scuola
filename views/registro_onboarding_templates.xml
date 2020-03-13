@@ -151,12 +151,12 @@
             </form>
         </field>
     </record-->
-    <record id="action_open_account_onboarding_sale_tax" model="ir.actions.act_window">
+    <!--record id="action_open_account_onboarding_sale_tax" model="ir.actions.act_window">
         <field name="name">Sales tax</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.company</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="account_invoice_onboarding_sale_tax_form" />
         <field name="target">new</field>
-    </record>
+    </record-->
 </odoo>
