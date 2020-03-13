@@ -7,7 +7,7 @@
         <field name="name">hr.presenze.tree</field>
         <field name="model">hr.presenze</field>
         <field name="arch" type="xml">
-            <tree string="Alunni presenze"  banner_route="/account/account_dashboard_onboarding" >
+            <tree string="Alunni presenze">
                 <field name="employee_id"/>
                 <field name="check_in"/>
                 <field name="check_out"/>
