@@ -68,7 +68,7 @@
         </xpath>
     </template>
     <!-- ONBOARDING PANELS -->
-    <template id="account_invoice_onboarding_panel" name="account.invoice.onboarding.panel">
+    <template id="scuola_registro_onboarding_panel" name="scuola.registro.onboarding.panel">
         <t t-call="base.onboarding_container">
             <t t-set="classes" t-value="'o_onboarding_blue'"/>
             <t t-set="bg_image" t-value="'/account/static/src/img/account_invoice_onboarding_bg.jpg'"/>
@@ -81,7 +81,7 @@
             <t t-call="account.onboarding_sample_invoice_step" name="sample_invoice_step" />
         </t>
     </template>
-    <template id="account_dashboard_onboarding_panel" name="account.dashboard.onboarding.panel">
+    <template id="registro_dashboard_onboarding_panel" name="registro.dashboard.onboarding.panel">
         <t t-call="base.onboarding_container">
             <t t-set="classes" t-value="'o_onboarding_orange'"/>
             <t t-set="bg_image" t-value="'/account/static/src/img/account_dashboard_onboarding_bg.jpg'"/>
