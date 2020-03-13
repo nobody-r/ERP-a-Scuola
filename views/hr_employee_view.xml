@@ -75,6 +75,9 @@
         <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
         <field name="priority">1</field>
         <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes"> 
+                <attribute name="banner_route" add="/account/account_dashboard_onboarding" />
+            </xpath>
             <templates position="before">
                 <field name="attendance_state"/>
             </templates>
