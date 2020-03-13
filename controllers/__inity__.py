@@ -1,2 +1,2 @@
-from . import onboarding
+from . import onRegistro
 
