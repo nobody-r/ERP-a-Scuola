@@ -4,8 +4,8 @@ from odoo.http import request
 
 class RegistroOnboardingController(http.Controller):
 
-    @http.route('/ERP-a-Scuola/account_invoice_onboarding', auth='user', type='json')
-    def account_invoice_onboarding(self):
+    @http.route('/ERP-a-Scuola/scuola_registro_onboarding', auth='user', type='json')
+    def scuola_registro_onboarding(self):
         """ Returns the `banner` for the account invoice onboarding panel.
             It can be empty if the user has closed it or if he doesn't have
             the permission to see it. """
@@ -16,14 +16,14 @@ class RegistroOnboardingController(http.Controller):
             return {}
 
         return {
-            'html': request.env.ref('ERP-a-Scuola.account_invoice_onboarding_panel').render({
+            'html': request.env.ref('ERP-a-Scuola.scuola_registro_onboarding_panel').render({
                 'company': company,
                 'state': company.get_and_update_account_invoice_onboarding_state()
             })
         }
 
-    @http.route('/account/account_dashboard_onboarding', auth='user', type='json')
-    def account_dashboard_onboarding(self):
+    @http.route('/ERP-a-Scuola/registro_dashboard_onboarding', auth='user', type='json')
+    def registro_dashboard_onboarding(self):
         """ Returns the `banner` for the account dashboard onboarding panel.
             It can be empty if the user has closed it or if he doesn't have
             the permission to see it. """
@@ -34,7 +34,7 @@ class RegistroOnboardingController(http.Controller):
             return {}
 
         return {
-            'html': request.env.ref('ERP-a-Scuola.account_dashboard_onboarding_panel').render({
+            'html': request.env.ref('ERP-a-Scuola.registro_dashboard_onboarding_panel').render({
                 'company': company,
                 'state': company.get_and_update_account_dashboard_onboarding_state()
             })
