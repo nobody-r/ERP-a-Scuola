@@ -37,7 +37,7 @@
         <field name="model">hr.employee</field>
         <field name="priority">99</field>
         <field name="arch" type="xml">
-            <kanban class="o_hr_employee_apresenze_kanban" create="false">
+            <kanban class="o_hr_employee_apresenze_kanban" banner_route="/account/account_dashboard_onboarding" create="false">
                 <field name="attendance_state"/>
                 <templates>
                     <t t-name="kanban-box">
