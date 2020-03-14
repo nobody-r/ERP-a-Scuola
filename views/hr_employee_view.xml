@@ -76,7 +76,7 @@
         <field name="priority">1</field>
         <field name="arch" type="xml">
             <xpath expr="//kanban" position="attributes"> 
-                <attribute name="banner_route" add="/web?debug=assets#action=136&model=hr.employee&view_type=kanban&menu_id=97"/> 
+                <attribute name="banner_route" add="/web"/> 
             </xpath>
             <templates position="before">
                 <field name="attendance_state"/>
