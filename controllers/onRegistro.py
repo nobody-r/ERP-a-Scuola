@@ -3,7 +3,7 @@ from odoo.http import request
 
 
 class RegistroOnboardingController(http.Controller):
-
+    prrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr!!!
     @http.route('/ERP-a-Scuola/scuola_registro_onboarding', auth='public', type='json')
     @serialize_exception
     def scuola_registro_onboarding(self):
