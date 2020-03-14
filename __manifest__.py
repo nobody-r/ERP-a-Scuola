@@ -1,5 +1,5 @@
 {
-    'name' : 'modulo_scuola',
+    'name' : 'erp_a_scuola',
     'version' : '1.0',
     'summary': 'Modulo per la scuola',
     'sequence': 15,
