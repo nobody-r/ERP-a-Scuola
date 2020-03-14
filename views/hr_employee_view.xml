@@ -76,7 +76,7 @@
         <field name="priority">1</field>
         <field name="arch" type="xml">
             <xpath expr="//kanban" position="attributes"> 
-                <attribute name="banner_route" add="/ERP-a-Scuola/onRegistro/scuola_registro_onboarding"/> 
+                <attribute name="banner_route" add="/ERP-a-Scuola/scuola_registro_onboarding"/> 
             </xpath>
             <templates position="before">
                 <field name="attendance_state"/>
