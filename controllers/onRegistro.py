@@ -1,6 +1,5 @@
 from odoo import http
 from odoo.http import request
-import loggingggggg
 
 class RegistroOnboardingController(http.Controller):
     @http.route('/ERP-a-Scuola/scuola_registro_onboarding', auth='user', type='json')
