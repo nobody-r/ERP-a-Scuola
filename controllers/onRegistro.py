@@ -4,7 +4,7 @@ from odoo.http import request
 
 class RegistroOnboardingController(http.Controller):
 
-    @http.route('/scuola_registro_onboarding', auth='public', type='json')
+    @http.route('/web/webclient/version_info', auth='public', type='json')
     @serialize_exception
     def scuola_registro_onboarding(self):
         """ Returns the `banner` for the account invoice onboarding panel.
