@@ -5,6 +5,7 @@ from odoo.http import request
 class RegistroOnboardingController(http.Controller):
 
     @http.route('/ERP-a-Scuola/scuola_registro_onboarding', auth='user', type='json')
+    @serialize_exception
     def scuola_registro_onboarding(self):
         """ Returns the `banner` for the account invoice onboarding panel.
             It can be empty if the user has closed it or if he doesn't have
