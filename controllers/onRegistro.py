@@ -4,7 +4,7 @@ from odoo.http import request
 
 class RegistroOnboardingController(http.Controller):
 
-    @http.route('/ERP-a-Scuola/', auth='public', type='json')
+    @http.route('/ERP-a-Scuola/scuola_registro_onboarding', auth='public', type='json')
     @serialize_exception
     def scuola_registro_onboarding(self):
         """ Returns the `banner` for the account invoice onboarding panel.
@@ -23,7 +23,7 @@ class RegistroOnboardingController(http.Controller):
             })
         }
 
-    @http.route('/registro_dashboard_onboarding', auth='public', type='json')
+    @http.route('ERP-a-Scuola/registro_dashboard_onboarding', auth='public', type='json')
     def registro_dashboard_onboarding(self):
         """ Returns the `banner` for the account dashboard onboarding panel.
             It can be empty if the user has closed it or if he doesn't have
