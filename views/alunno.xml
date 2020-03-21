@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
+    <record id="project_esteso" model="ir.ui.view">
+        <field name="name">project.esteso</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+         <field name="arch"  type="xml">
+            <field name="name" position="after">
+                <field name="classe_i"/>
+            </field>
+         </field>
+    </record>
+
     #modalità visualizzazione TREE
     <record id="alunno_tree" model="ir.ui.view">
         <field name="name">scuola.alunno.tree</field>

@@ -1,5 +1,11 @@
 from odoo import models, fields, api, _
 
+class project_esteso(models.Model):
+    _inherit= 'project.project'
+    classe_i = fields.Many2one('scuola.classi', string='Classe')
+
+
+
 class scuola_alunno(models.Model):
     _name= 'scuola.alunno'
     _description= 'Alunno Record'

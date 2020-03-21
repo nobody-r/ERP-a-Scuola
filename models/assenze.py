@@ -10,3 +10,5 @@ class scuola_assenze(models.Model):
         ('ingiustificata', 'Ingiustificata'),
         ('Giustificata', 'Giustificata'),
     ], default='ingiustificata', string='Assenza')
+
+

@@ -22,3 +22,4 @@ class scuola_voti(models.Model):
 
 
 
+
